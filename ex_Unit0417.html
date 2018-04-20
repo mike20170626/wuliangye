@@ -10,6 +10,8 @@
 	var arr1=new Array();
 	var arr2=[];
 
+	var testnum=[2,5,7,0,4,6];
+
 	//循环输出所有的车的名称；
 	for (var i = 0; i <cars.length; i++) {
 	      console.log("第"+eval(i+1)+"车的名称是："+cars[i]);
@@ -22,6 +24,42 @@
 	//输出数组Arr1 和 Arr2,都是空数组，因为没有指定大小，所以数组的长度都是0
 	console.log("arr1:"+arr1.length);
 	console.log("arr2:"+arr2.length);
+
+	//数组排序；
+	console.log(testnum);
+	console.log("数组的默认排序显示：\n");
+	testnum.sort();
+	for (var i = 0; i < testnum.length; i++) {
+		console.log("数组的各个元素分别是："+testnum[i]+" ");
+	}
+
+	function sortDao(num1,num2){
+		if (num1>num2){			
+			return -1;
+		}else if(num1<num2){
+			return 1;
+		}else{
+			return 0;
+		}
+//		console.log(testnum);
+
+
+	}
+	//从大到小 的排序之后的输出是：
+//	testnum.sort(sortDao);
+		testnum.sort(sortDao);
+		console.log(testnum);
+
+
+		for (var i = 0; i < testnum.length; i++) 
+		{
+			console.log("排序之后数组的各个元素分别是："+testnum[i]+" ");
+		}
+
+	// console.log("-------数组升序、降序排列---------");
+	// var arrTest13=[1,17,2,13,10,99,21,12];
+	// console.log(arrTest13);
+	// arrTest13.sort(compare1);
 
 </script>
 
